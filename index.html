@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portafolio</title>
+  <meta name="description" content="Portafolio de diseño web">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#" data-bind="name"></a>
+    <nav>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow"><span data-bind="role"></span><span class="dot"></span><span>Portafolio <span data-bind="year"></span></span></p>
+      <h1 data-bind="intro"></h1>
+      <ol class="toc" id="toc"></ol>
+    </section>
+
+    <section id="proyectos" class="projects" aria-label="Proyectos">
+      <p class="state" id="state">Cargando proyectos…</p>
+    </section>
+  </main>
+
+  <footer id="contacto" class="contact">
+    <p class="eyebrow">Contacto</p>
+    <h2>¿Trabajamos juntos?</h2>
+    <a class="mail" id="mail" hidden></a>
+    <ul class="links" id="links"></ul>
+    <p class="legal"><span data-bind="name"></span> · <span data-bind="year"></span></p>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Imagen ampliada">
+    <button class="lb-close" data-lb="close" aria-label="Cerrar">✕</button>
+    <button class="lb-nav lb-prev" data-lb="prev" aria-label="Anterior">←</button>
+    <figure>
+      <img alt="">
+      <figcaption></figcaption>
+    </figure>
+    <button class="lb-nav lb-next" data-lb="next" aria-label="Siguiente">→</button>
+  </dialog>
+
+  <script>window.PORTFOLIO_DATA_URL = "data.json";</script>
+  <script src="assets/site.js" type="module"></script>
+</body>
+</html>
